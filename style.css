@@ -34,10 +34,12 @@ body {
 }
 
 /* GENERAL ELEMENTS */
+.modal--hidden{
+  display: none;
+}
 .section {
   padding: 15rem 3rem;
   border-top: 1px solid #ddd;
-
   transition: transform 1s, opacity 1s;
 }
 
@@ -45,7 +47,10 @@ body {
   opacity: 0;
   transform: translateY(8rem);
 }
-
+.sections--hidden{
+  opacity: 0;
+  transform: translateY(8rem);
+}
 .section__title {
   max-width: 80rem;
   margin: 0 auto 8rem auto;
@@ -663,6 +668,7 @@ h4 {
 .hidden {
   visibility: hidden;
   opacity: 0;
+  display: none;
 }
 
 /* COOKIE MESSAGE */

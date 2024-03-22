@@ -2,7 +2,10 @@
 
 
 const modal = document.querySelector('.modal');
+const modalSignIn = document.querySelector('.modal-signIn');
 const overlay = document.querySelector('.overlay');
+const btnSignInModal = document.querySelector('.btn--sign-in');
+const btnCloseModalSignIn = document.querySelector('.btn--close-modal-signIn');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
@@ -14,6 +17,28 @@ const tabsContent = document.querySelectorAll('.operations__content');
 
 
 ///////////////////////////////////////
+// Sign in
+const openModalSignIn = function (e) {
+  e.preventDefault();
+  modalSignIn.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+const closeModalSignIn = function () {
+  modalSignIn.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+  
+btnSignInModal.addEventListener('click', openModalSignIn);
+btnCloseModalSignIn.addEventListener('click', closeModalSignIn);
+overlay.addEventListener('click', closeModalSignIn);
+  
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modalSignIn.classList.contains('hidden')) {
+      closeModalSignIn() 
+    }
+  });
+
+///////////////////////////////////////
 // Modal window
 
 const openModal = function (e) {
@@ -22,22 +47,24 @@ const openModal = function (e) {
     overlay.classList.remove('hidden');
   };
   
-  const closeModal = function () {
+const closeModal = function () {
     modal.classList.add('hidden');
     overlay.classList.add('hidden');
   };
   
-  btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
+btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
   
-  btnCloseModal.addEventListener('click', closeModal);
-  overlay.addEventListener('click', closeModal);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
   
-  document.addEventListener('keydown', function (e) {
+document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-      closeModal();
+      closeModal() 
     }
   });
   
+  ////////////////////////////////////////
+
   ///////////////////////////////////////
 // Button scrolling
 btnScrollTo.addEventListener('click', function(e){
@@ -57,7 +84,8 @@ document.querySelector('.nav__links').addEventListener('click',function(e) {
   //Matching strategy
   if(e.target.classList.contains('nav__link')) {
     const id= e.target.getAttribute('href');
-    document.querySelector(id).scrollIntoView({behavior:'smooth'})
+    console.log(id);
+    // document.querySelector(id).scrollIntoView({behavior:'smooth'})
   }
 })
 
@@ -264,3 +292,6 @@ document.addEventListener('DOMContentLoaded', function(e){
 window.addEventListener('load', function(e){
   console.log('Page fully loaded',e);
 })
+
+
+

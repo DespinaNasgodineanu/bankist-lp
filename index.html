@@ -11,13 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_sign-in.css" />
     <title>Bankist | When Banking meets Minimalist</title>
 
     <script defer src="script.js"></script>
+    <script defer src="script-sign-in.js"></script>
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav ">
         <img
           src="img/logo.png"
           alt="Bankist logo"
@@ -37,13 +39,15 @@
             <a class="nav__link" href="#section--3">Testimonials</a>
           </li>
           <li class="nav__item">
+            <a class="nav__link btn--sign-in" href="#app">Sign in</a>
+          </li>
+          <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
               >Open account</a
             >
           </li>
         </ul>
       </nav>
-
       <div class="header__title">
         <!-- <h1 onclick="alert('HTML alert')"> -->
         <h1>
@@ -62,7 +66,7 @@
         />
       </div>
     </header>
-
+    <div class="sections">
     <section class="section" id="section--1">
       <div class="section__title">
         <h2 class="section__description">Features</h2>
@@ -86,7 +90,9 @@
           </div>
           <h5 class="features__header">100% digital bank</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            You open your account directly from your phone with your identity card and card from another 
+            bank in the country. You must be over 18 years old, tax resident in Romania and not already 
+            an Banksit customer. 
           </p>
         </div>
 
@@ -98,9 +104,10 @@
           </div>
           <h5 class="features__header">Watch your money grow</h5>
           <p>
-            Nesciunt quos autem dolorum voluptates cum dolores dicta fuga
-            inventore ab? Nulla incidunt eius numquam sequi iste pariatur
-            quibusdam!
+            In short, you save as many times as you pay. Round Up further rounds each payment up to the 
+            next multiple of 5. Anything extra is automatically moved into your savings account. The money 
+            accumulates little by little, without you doing anything special. The savings account costs you
+             nothing and you can open it directly from application.
           </p>
         </div>
         <img
@@ -122,11 +129,12 @@
               <use xlink:href="img/icons.svg#icon-credit-card"></use>
             </svg>
           </div>
-          <h5 class="features__header">Free debit card included</h5>
+          <h5 class="features__header">Good exchange rate non-stop</h5>
           <p>
-            Quasi, fugit in cumque cupiditate reprehenderit debitis animi enim
-            eveniet consequatur odit quam quos possimus assumenda dicta fuga
-            inventore ab.
+            If you want to order something from outside websites, don't worry about the course. Your money are
+             automatically exchanged at an advantageous rate, no matter the time. And when paying by card, 
+             and when paying outside the country, and in the application, within the limit of 10,000 Lei per 
+             month or the equivalent in another currency.
           </p>
         </div>
       </div>
@@ -167,10 +175,13 @@
             Tranfser money to anyone, instantly! No fees, no BS.
           </h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            If you are a Bankist customer and have an account in lei or euro with a debit card attached, 
+            you can send and receive money via MoneyGram directly at the Multipurpose Counters. The maximum 
+            total amount you can receive and transfer daily is EUR 10,000 or equivalent in RON, regardless 
+            of the channel through which the transactions are carried out. We have over 400 automated 
+            equipment that you have access to anytime during bank hours, without an appointment around the 
+            clock in Bankist units that have a 24/7 Self Service area (over 130 locations); after the 
+            schedule, access to the Self Service area is made with the help of your bank card.
           </p>
         </div>
  
@@ -184,10 +195,10 @@
             Buy a home or make your dreams come true, with instant loans.
           </h5>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+            Payments to other banks via the app now become much easier and faster
+            Bankist customers, individuals, can make interbank transactions of up to 50,000 lei, 
+            in less than ten seconds, any day of the year, at any time of the day or night
+            The operations are free if they are carried out from the account in the application.
           </p>
         </div>
         <div class="operations__content operations__content--3">
@@ -200,10 +211,8 @@
             No longer need your account? No problem! Close it instantly.
           </h5>
           <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
+            Closing a bank account is done, in most cases, by going to a bank and submitting a request to
+             that effect. At Bankist, the account can be closed instantly from the application!
           </p>
         </div>
       </div>
@@ -222,12 +231,9 @@
           <div class="testimonial">
             <h5 class="testimonial__header">Best financial decision ever!</h5>
             <blockquote class="testimonial__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium quas quisquam non? Quas voluptate nulla minima
-              deleniti optio ullam nesciunt, numquam corporis et asperiores
-              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
-              id alias reiciendis, perferendis facere pariatur dolore veniam
-              autem esse non voluptatem saepe provident nihil molestiae.
+              I have had an account here for a very long time. I opened my first bank account 
+              with them when I was 16 because I wanted to pay something with PayPal and from my 
+              research 12 years ago it was the easiest to integrate the card with PayPal at the time.
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
@@ -243,11 +249,12 @@
               The last step to becoming a complete minimalist
             </h5>
             <blockquote class="testimonial__text">
-              Quisquam itaque deserunt ullam, quia ea repellendus provident,
-              ducimus neque ipsam modi voluptatibus doloremque, corrupti
-              laborum. Incidunt numquam perferendis veritatis neque repellendus.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-              deserunt exercitationem deleniti.
+              This is where I have the main account and in principle I am satisfied. 
+              I had to open an account here when I entered college because my father had an account at another 
+              bank and it was easier for him to send my money than to go to the bank, where there was always a
+              queue of dozens of people.
+              The mobile banking app has received major improvements in the last few years and I haven't 
+              had any issues with it for a long time, here I give them a plus.
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
@@ -263,17 +270,13 @@
               Finally free from old-school banks
             </h5>
             <blockquote class="testimonial__text">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-              incidunt commodi architecto numquam omnis nulla autem,
-              necessitatibus blanditiis modi similique quidem. Odio aliquam
-              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
-              alias reiciendis, perferendis facere.
+              What is the best bank in Romania? The best bank is the one that meets your needs. If you want 
+              something with majority Romanian ownership, I would go for the subscription from Bankist.
             </blockquote>
             <address class="testimonial__author">
               <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
               <h6 class="testimonial__name">Francisco Gomes</h6>
-              <p class="testimonial__location">Lisbon, Portugal</p>
+              <p class="testimonial__location">Bucharest, Romania</p>
             </address>
           </div>
         </div>
@@ -323,11 +326,9 @@
         &copy; Copyright by
         <a
           class="footer__link twitter-link"
-          target="_blank"
-          href="https://twitter.com/jonasschmedtman"
-          >Jonas Schmedtmann</a
-        >. Use for learning or your portfolio. Don't use to teach. Don't claim
-        as your own product.
+          href="http://linkedin.com/in/despina-nasgodineanu-13199b195"
+          >Nasgodineanu Despina</a
+        >
       </p>
     </footer>
 
@@ -344,9 +345,128 @@
         <input type="text" />
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <label>Password</label>
+        <input type="password">
+        <button class="btn">Create account &rarr;</button>
+      </form>
+    </div>
+   
+    <div class="modal-signIn modal hidden">
+      <button class="btn--close-modal-signIn btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Go to your bank account <br />
+        and check <span class="highlight">the money</span>
+      </h2>
+      <form class="modal__form">
+        <label >User</label>
+        <input type="text"
+            placeholder="user"
+            class="login__input login__input--user" />
+        <label >Password</label>
+        <input type="text"
+            placeholder="PIN"
+            maxlength="4"
+            class="login__input login__input--pin">
+        <button class="login__btn">Sign in &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
+  </div>
+
+    <!--SignIn -->      
+    <!-- TOP NAVIGATION -->
+    <div class="modal-sign-in modal--hidden">
+      <nav class="modal-nav">
+        <p class="welcome">Log in to get started</p>
+        <img src="logo.png" alt="Logo" class="logo" />
+        <form class="login">
+            <button class="btn btn_sign--out">Sign out</button>
+        </form>
+      </nav>
+  
+      <main class="app">
+        <!-- BALANCE -->
+        <div class="balance">
+          <div>
+            <p class="balance__label">Current balance</p>
+            <p class="balance__date">
+              As of <span class="date">05/03/2037</span>
+            </p>
+          </div>
+          <p class="balance__value">0000€</p>
+        </div>
+  
+        <!-- MOVEMENTS -->
+        <div class="movements">
+          <div class="movements__row">
+            <div class="movements__type movements__type--deposit">2 deposit</div>
+            <div class="movements__date">3 days ago</div>
+            <div class="movements__value">4 000€</div>
+          </div>
+          <div class="movements__row">
+            <div class="movements__type movements__type--withdrawal">
+              1 withdrawal
+            </div>
+            <div class="movements__date">24/01/2037</div>
+            <div class="movements__value">-378€</div>
+          </div>
+        </div>
+  
+        <!-- SUMMARY -->
+        <div class="summary">
+          <p class="summary__label">In</p>
+          <p class="summary__value summary__value--in">0000€</p>
+          <p class="summary__label">Out</p>
+          <p class="summary__value summary__value--out">0000€</p>
+          <p class="summary__label">Interest</p>
+          <p class="summary__value summary__value--interest">0000€</p>
+          <button class="btn--sort">&downarrow; SORT</button>
+        </div>
+  
+        <!-- OPERATION: TRANSFERS -->
+        <div class="operation operation--transfer">
+          <h2>Transfer money</h2>
+          <form class="form form--transfer">
+            <input type="text" class="form__input form__input--to" />
+            <input type="number" class="form__input form__input--amount" />
+            <button class="form__btn form__btn--transfer">&rarr;</button>
+            <label class="form__label">Transfer to</label>
+            <label class="form__label">Amount</label>
+          </form>
+        </div>
+  
+        <!-- OPERATION: LOAN -->
+        <div class="operation operation--loan">
+          <h2>Request loan</h2>
+          <form class="form form--loan">
+            <input type="number" class="form__input form__input--loan-amount" />
+            <button class="form__btn form__btn--loan">&rarr;</button>
+            <label class="form__label form__label--loan">Amount</label>
+          </form>
+        </div>
+  
+        <!-- OPERATION: CLOSE -->
+        <div class="operation operation--close">
+          <h2>Close account</h2>
+          <form class="form form--close">
+            <input type="text" class="form__input form__input--user" />
+            <input
+              type="password"
+              maxlength="6"
+              class="form__input form__input--pin"
+            />
+            <button class="form__btn form__btn--close">&rarr;</button>
+            <label class="form__label">Confirm user</label>
+            <label class="form__label">Confirm PIN</label>
+          </form>
+        </div>
+  
+        <!-- LOGOUT TIMER -->
+        <p class="logout-timer">
+          You will be logged out in <span class="timer">05:00</span>
+        </p>
+      </main>
+    </div>
+      
   </body>
 </html>
