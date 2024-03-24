@@ -31,6 +31,7 @@ body {
   color: #444;
   line-height: 1.9;
   background-color: #f3f3f3;
+  text-align: center;
 }
 
 /* GENERAL ELEMENTS */
@@ -124,12 +125,11 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 9rem;
-  width: 100%;
-  padding: 0 6rem;
+  width: auto;
+  /* padding: 0 6rem; */
   z-index: 100;
   border-radius: 20px;
 }
-
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
@@ -190,14 +190,12 @@ img {
 
 .header__title {
   flex: 1;
-
   max-width: 115rem;
   display: grid;
   grid-template-columns: 3fr 2fr;
   row-gap: 3rem;
   align-content: center;
   justify-content: center;
-
   align-items: start;
   justify-items: start;
 }
@@ -566,6 +564,7 @@ h4 {
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
+  padding-left: 4rem;
 }
 
 .footer__item {
@@ -681,4 +680,104 @@ h4 {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+@media screen and (max-width:1000px) {
+  body{
+    padding: 2rem 0rem 2rem 2rem;
+  }
+  .nav, .nav.sticky{
+    padding:0px;
+  }
+  .nav__item {
+    margin-left: 1rem;
+  }
+  .nav__links{
+    margin-right: 10rem;
+    margin-right: 20px;
+  }
+  .features{
+    margin: 0px;
+    margin-right: 10px;
+  }
+  .footer__nav{
+    display: block;
+    text-align: center;
+    padding-left: 4rem;
+  }
+}
+@media screen and (max-width:850px) {
+  .header{
+    padding: 5px;
+  }
+  .header__title{
+    padding-left: 2rem;
+  }
+  .nav__link:link{
+    font-size: 1.2rem;
+  }
+  .header__title{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+  }
+  .header__img{
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width:700px) {
+  .features{
+    display: block;
+  }
+  .features__feature {
+    width: 100%;
+    text-align: center;
+  }
+  .operations__tab-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .operations__tab {
+    margin-right: 0px;
+  }
+  .btn{
+    width:260px ;
+  }
+}
+@media screen and (max-width:550px) {
+  .header__title{
+    row-gap: 0px;
+  }
+  .operations__content{
+    padding: 2rem;
+  }
+  .operations__content--active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .section__header{
+    font-size: 3rem;
+  }
+    
+}
+@media screen and (max-width:500px) {
+  .section{
+    padding: 7rem 1rem;
+  }
+  .testimonial{
+    width: 100%;
+  }
+  .testimonial__text{
+    font-size: 1.3rem
+  }
+  .slider__btn{
+    top: 96%;
+  }
+}
+@media screen and (max-width:320px) {
+  .btn{
+    width: 100%;
+  }
 }
