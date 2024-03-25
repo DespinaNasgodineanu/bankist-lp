@@ -4,17 +4,19 @@
 const modal = document.querySelector('.modal');
 const modalSignIn = document.querySelector('.modal-signIn');
 const overlay = document.querySelector('.overlay');
-const btnSignInModal = document.querySelector('.btn--sign-in');
+const btnSignInModal = document.querySelectorAll('.btn--sign-in');
 const btnCloseModalSignIn = document.querySelector('.btn--close-modal-signIn');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
+const btnDropdown = document.querySelector('.dropdown_button');
 const section1 = document.querySelector('#section--1');
 const nav = document.querySelector('.nav');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
-
+const navLinks = document.querySelector('.nav__links');
+const navDropdown = document.querySelector('.dropdown_links');
 
 ///////////////////////////////////////
 // Sign in
@@ -28,7 +30,7 @@ const closeModalSignIn = function () {
   overlay.classList.add('hidden');
 };
   
-btnSignInModal.addEventListener('click', openModalSignIn);
+btnSignInModal.forEach(btn => btn.addEventListener('click', openModalSignIn));
 btnCloseModalSignIn.addEventListener('click', closeModalSignIn);
 overlay.addEventListener('click', closeModalSignIn);
   
@@ -63,8 +65,6 @@ document.addEventListener('keydown', function (e) {
     }
   });
   
-  ////////////////////////////////////////
-
   ///////////////////////////////////////
 // Button scrolling
 btnScrollTo.addEventListener('click', function(e){
@@ -72,7 +72,23 @@ btnScrollTo.addEventListener('click', function(e){
   section1.scrollIntoView({behavior:"smooth"})
 })
 
+/////////////////////////////////
+const navLink = document.querySelectorAll('.nav_mobile .nav__link');
 
+//Menu button
+const openDropdownNav= function (e) {
+  e.preventDefault();
+  navDropdown.classList.remove('nav_hidden');
+  overlay.classList.remove('hidden');
+};
+const closeDropdownNav= function () {
+  navDropdown.classList.add('nav_hidden');
+  overlay.classList.add('hidden');
+};
+
+btnDropdown.addEventListener('click', openDropdownNav);
+navLink.forEach(btn => btn.addEventListener("click", closeDropdownNav));
+overlay.addEventListener('click',  closeDropdownNav);
 ///////////////////////////////////////
 // Page navigation 
 //1.Add event listeneer to common parent element
